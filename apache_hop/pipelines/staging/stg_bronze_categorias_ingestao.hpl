@@ -85,7 +85,7 @@
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
     <sql>SELECT
-  "IdCategoriaA"
+  "IdCategoria"
 , "Categoria"
 FROM "public"."categorias"
 </sql>
