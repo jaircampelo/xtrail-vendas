@@ -1,0 +1,12 @@
+{
+  "virtualPath": "",
+  "loggingParentsOnly": false,
+  "name": "wl_xtrail_vendas_log",
+  "workflowToLog": [],
+  "intervalInSeconds": "30",
+  "executingPeriodically": false,
+  "pipelineFilename": "${PROJECT_HOME}/pipelines/staging/stg_log_orquestracao_dw.hpl",
+  "executingAtEnd": true,
+  "enabled": true,
+  "executingAtStart": true
+}
