@@ -27,24 +27,6 @@
     </hop>
   </order>
   <transform>
-    <name>src_log_orquestracao_dw</name>
-    <type>WorkflowLogging</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <log_transforms>Y</log_transforms>
-    <attributes/>
-    <GUI>
-      <xloc>208</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>out_escrevendo_logOrquestracaoDw_stg_xtrail_vendas</name>
     <type>TableOutput</type>
     <description/>
@@ -68,14 +50,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>dbo</schema>
     <specify_fields>N</specify_fields>
     <table>logOrquestracaoDw</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>N</truncate>
@@ -83,6 +62,24 @@
     <attributes/>
     <GUI>
       <xloc>544</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>src_log_orquestracao_dw</name>
+    <type>WorkflowLogging</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <log_transforms>Y</log_transforms>
+    <attributes/>
+    <GUI>
+      <xloc>208</xloc>
       <yloc>320</yloc>
     </GUI>
   </transform>

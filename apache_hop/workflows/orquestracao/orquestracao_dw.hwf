@@ -5,6 +5,7 @@
   <description/>
   <extended_description/>
   <workflow_version/>
+  <workflow_status>0</workflow_status>
   <created_user>-</created_user>
   <created_date>2026/02/19 02:13:08.658</created_date>
   <modified_user>-</modified_user>
@@ -41,8 +42,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_bronze.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -67,8 +66,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_silver.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -93,8 +90,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_gold_dimensoes.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -119,8 +114,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_gold_fatos.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -157,8 +150,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_extra_data_incremental_variavel.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -183,8 +174,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/limpa_staging.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -204,7 +193,7 @@
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A carga dos dados do departamento de vendas foi realizada com sucesso e está pronta para futuras análises.
@@ -213,7 +202,12 @@
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -225,18 +219,21 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>normal</priority>
+      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Carga DW - Sucesso</subject>
+      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
+      <zip_name/>
       <parallel>N</parallel>
       <xloc>1520</xloc>
       <yloc>96</yloc>
@@ -247,7 +244,7 @@ Jair Campelo - Analista de BI</comment>
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada BRONZE.
@@ -290,7 +287,7 @@ Jair Campelo - Analista de BI</comment>
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada SILVER.
@@ -299,7 +296,12 @@ Jair Campelo - Analista de BI</comment>
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -311,18 +313,21 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>high</priority>
+      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Carga Silver - Erro</subject>
+      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
+      <zip_name/>
       <parallel>N</parallel>
       <xloc>768</xloc>
       <yloc>224</yloc>
@@ -333,7 +338,7 @@ Jair Campelo - Analista de BI</comment>
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada GOLD-DIMENSOES.
@@ -342,7 +347,12 @@ Jair Campelo - Analista de BI</comment>
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -354,18 +364,21 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>high</priority>
+      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Carga Gold-Dimensoes - Erro</subject>
+      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
+      <zip_name/>
       <parallel>N</parallel>
       <xloc>944</xloc>
       <yloc>224</yloc>
@@ -376,7 +389,7 @@ Jair Campelo - Analista de BI</comment>
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada GOLD-FATOS.
@@ -385,7 +398,12 @@ Jair Campelo - Analista de BI</comment>
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -397,18 +415,21 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>high</priority>
+      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Carga Gold-Fatos - Erro</subject>
+      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
+      <zip_name/>
       <parallel>N</parallel>
       <xloc>1136</xloc>
       <yloc>224</yloc>
@@ -419,7 +440,7 @@ Jair Campelo - Analista de BI</comment>
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_password>${smtp_password}</auth_password>
       <auth_user>jairjrcampelo@gmail.com</auth_user>
       <check_server_identity>N</check_server_identity>
       <comment>A execução de limpeza dos dados na camada STAGE foi interrompida devido erro de execução.
@@ -428,7 +449,12 @@ Jair Campelo - Analista de BI</comment>
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -440,18 +466,21 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>high</priority>
+      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Limpeza da Stage - Erro</subject>
+      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
+      <zip_name/>
       <parallel>N</parallel>
       <xloc>1312</xloc>
       <yloc>224</yloc>

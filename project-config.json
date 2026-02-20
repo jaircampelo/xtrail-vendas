@@ -8,6 +8,9 @@
   "enforcingExecutionInHome" : true,
   "parentProjectName" : "default",
   "config" : {
-    "variables" : [ ]
+    "variables" : [ {
+      "name" : "smtp_password",
+      "value" : "ejkd gnhp mvba duxv"
+    } ]
   }
 }

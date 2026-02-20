@@ -5,7 +5,7 @@
   "workflowToLog": [],
   "intervalInSeconds": "30",
   "executingPeriodically": false,
-  "pipelineFilename": "${PROJECT_HOME}/pipelines/staging/stg_log_orquestracao_dw.hpl",
+  "pipelineFilename": "${PROJECT_HOME}/apache_hop/pipelines/staging/stg_log_orquestracao_dw.hpl",
   "executingAtEnd": true,
   "enabled": true,
   "executingAtStart": true
