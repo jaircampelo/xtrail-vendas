@@ -55,14 +55,11 @@
     <only_when_have_rows>N</only_when_have_rows>
     <partitioning_daily>N</partitioning_daily>
     <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
     <partitioning_monthly>Y</partitioning_monthly>
-    <return_field/>
     <return_keys>N</return_keys>
     <schema>dbo</schema>
     <specify_fields>N</specify_fields>
     <table>dTerritorios</table>
-    <tablename_field/>
     <tablename_in_field>N</tablename_in_field>
     <tablename_in_table>Y</tablename_in_table>
     <truncate>Y</truncate>
@@ -115,14 +112,7 @@ FROM [dbo].silverTerritorios
     </partitioning>
     <fields>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
         <length>9</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>territorio_id</name>
@@ -133,14 +123,7 @@ FROM [dbo].silverTerritorios
         <type>Integer</type>
       </meta>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
         <length>50</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>territorio_regiao</name>
@@ -151,14 +134,7 @@ FROM [dbo].silverTerritorios
         <type>String</type>
       </meta>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
         <length>50</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>territorio_pais</name>
@@ -169,14 +145,7 @@ FROM [dbo].silverTerritorios
         <type>String</type>
       </meta>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
         <length>50</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>territorio_continente</name>
@@ -187,14 +156,7 @@ FROM [dbo].silverTerritorios
         <type>String</type>
       </meta>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
         <length>3</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>territorio_data_registro</name>
