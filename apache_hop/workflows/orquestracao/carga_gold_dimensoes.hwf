@@ -42,7 +42,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_dTerritorios.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dTerritorios.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -70,7 +70,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_dClientes.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dClientes.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -98,7 +98,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_dSubcategorias.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dSubcategorias.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -126,7 +126,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_dProdutos.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dProdutos.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -154,7 +154,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_dCalendario.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dCalendario.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>

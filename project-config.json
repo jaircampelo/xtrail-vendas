@@ -1,0 +1,13 @@
+{
+  "description" : "Projeto final do curso de Apache Hop da Xperiun",
+  "company" : "jaircampelo",
+  "department" : "Engenharia de Dados",
+  "metadataBaseFolder" : "${PROJECT_HOME}/apache_hop/metadata",
+  "unitTestsBasePath" : "${PROJECT_HOME}/apache_hop",
+  "dataSetsCsvFolder" : "${PROJECT_HOME}/apache_hop/datasets",
+  "enforcingExecutionInHome" : true,
+  "parentProjectName" : "default",
+  "config" : {
+    "variables" : [ ]
+  }
+}

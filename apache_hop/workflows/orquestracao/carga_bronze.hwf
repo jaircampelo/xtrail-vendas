@@ -42,7 +42,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_categorias_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_categorias_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -68,7 +70,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_clientes_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_clientes_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -94,7 +98,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_territorios_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_territorios_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -120,7 +126,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_subcategorias_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_subcategorias_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -146,7 +154,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_produtos_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_produtos_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -172,7 +182,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_metas_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_metas_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -198,7 +210,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_vendas_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_vendas_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -224,7 +238,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/staging/stg_bronze_devolucoes_ingestao.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_bronze_devolucoes_ingestao.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>

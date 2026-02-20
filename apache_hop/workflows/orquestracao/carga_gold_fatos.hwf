@@ -42,7 +42,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_fMetas.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fMetas.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -68,7 +70,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_fDevolucoes.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fDevolucoes.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -94,7 +98,9 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/pipelines/dw/dw_gold_fVendas.hpl</filename>
+      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fVendas.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -121,7 +127,6 @@ WHERE pedido_data >= '${_data_incremental}'
 
 DELETE FROM dw_xtrail_vendas.dbo.fDevolucoes
 WHERE devolucao_data >= '${_data_incremental}'</sql>
-      <sqlfilename/>
       <sqlfromfile>N</sqlfromfile>
       <useVariableSubstitution>Y</useVariableSubstitution>
       <parallel>N</parallel>
