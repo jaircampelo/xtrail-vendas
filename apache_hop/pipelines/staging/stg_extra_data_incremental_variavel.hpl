@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>stg_extra_data_incremental_variavel</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2026/02/19 02:30:49.555</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2026/02/19 02:30:49.555</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>src_buscando_data_incremental_dw_xtrail_vendas</from>
+      <to>out_criando_data_incremental_variavel</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>out_criando_data_incremental_variavel</name>
+    <type>SetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <default_value>?</default_value>
+        <field_name>data_incremental</field_name>
+        <variable_name>_data_incremental</variable_name>
+        <variable_type>JVM</variable_type>
+      </field>
+    </fields>
+    <use_formatting>Y</use_formatting>
+    <attributes/>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>src_buscando_data_incremental_dw_xtrail_vendas</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>rdc_dw_xtrail_vendas</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>select dateadd( day
+			  , -30
+			  , max(pedido_data)
+			  )		  as data_incremental
+  from [dbo].fVendas
+</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>

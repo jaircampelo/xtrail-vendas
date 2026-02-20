@@ -1,0 +1,27 @@
+{
+  "virtualPath": "",
+  "rdbms": {
+    "POSTGRESQL": {
+      "databaseName": "dados_xtrail_vendas",
+      "pluginId": "POSTGRESQL",
+      "accessType": 0,
+      "hostname": "localhost",
+      "password": "Encrypted 2be98afc86ae7c4dcfc4bfc258dc4a5f0",
+      "pluginName": "PostgreSQL",
+      "port": "5432",
+      "attributes": {
+        "SUPPORTS_TIMESTAMP_DATA_TYPE": "Y",
+        "QUOTE_ALL_FIELDS": "Y",
+        "SUPPORTS_BOOLEAN_DATA_TYPE": "Y",
+        "FORCE_IDENTIFIERS_TO_LOWERCASE": "N",
+        "PRESERVE_RESERVED_WORD_CASE": "Y",
+        "SQL_CONNECT": "",
+        "FORCE_IDENTIFIERS_TO_UPPERCASE": "N",
+        "PREFERRED_SCHEMA_NAME": ""
+      },
+      "manualUrl": "",
+      "username": "postgres"
+    }
+  },
+  "name": "rdc_dados_xtrail_vendas"
+}
