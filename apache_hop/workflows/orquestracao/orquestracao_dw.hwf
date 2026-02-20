@@ -27,8 +27,8 @@
       <schedulerType>0</schedulerType>
       <weekDay>1</weekDay>
       <parallel>N</parallel>
-      <xloc>112</xloc>
-      <yloc>240</yloc>
+      <xloc>256</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -51,8 +51,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>448</xloc>
-      <yloc>240</yloc>
+      <xloc>608</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -75,8 +75,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>608</xloc>
-      <yloc>240</yloc>
+      <xloc>768</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -99,8 +99,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>784</xloc>
-      <yloc>240</yloc>
+      <xloc>944</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -123,8 +123,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>992</xloc>
-      <yloc>240</yloc>
+      <xloc>1136</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -133,8 +133,8 @@
       <type>SUCCESS</type>
       <attributes/>
       <parallel>N</parallel>
-      <xloc>1360</xloc>
-      <yloc>240</yloc>
+      <xloc>1696</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -159,8 +159,8 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>256</xloc>
-      <yloc>240</yloc>
+      <xloc>416</xloc>
+      <yloc>96</yloc>
       <attributes_hac/>
     </action>
     <action>
@@ -173,8 +173,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/workflows/orquestracao/limpa_staging.hwf</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -185,8 +183,317 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>1200</xloc>
-      <yloc>240</yloc>
+      <xloc>1312</xloc>
+      <yloc>96</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_sucesso_orquestracao_dw</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A carga dos dados do departamento de vendas foi realizada com sucesso e está pronta para futuras análises.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>normal</priority>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Carga DW - Sucesso</subject>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <parallel>N</parallel>
+      <xloc>1520</xloc>
+      <yloc>96</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_erro_bronze</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada BRONZE.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>high</priority>
+      <replyToAddresses/>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Carga Bronze - Erro</subject>
+      <trusted_hosts/>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <parallel>N</parallel>
+      <xloc>608</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_erro_silver</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada SILVER.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>high</priority>
+      <replyToAddresses/>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Carga Silver - Erro</subject>
+      <trusted_hosts/>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <parallel>N</parallel>
+      <xloc>768</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_erro_dimensoes</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada GOLD-DIMENSOES.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>high</priority>
+      <replyToAddresses/>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Carga Gold-Dimensoes - Erro</subject>
+      <trusted_hosts/>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <parallel>N</parallel>
+      <xloc>944</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_erro_fatos</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A carga dos dados para o DW foi interrompida devido erro de execução na camada GOLD-FATOS.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>high</priority>
+      <replyToAddresses/>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Carga Gold-Fatos - Erro</subject>
+      <trusted_hosts/>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <parallel>N</parallel>
+      <xloc>1136</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>email_erro_bronze 5</name>
+      <description/>
+      <type>MAIL</type>
+      <attributes/>
+      <auth_password>veyq fixj jqzz peow</auth_password>
+      <auth_user>jairjrcampelo@gmail.com</auth_user>
+      <check_server_identity>N</check_server_identity>
+      <comment>A execução de limpeza dos dados na camada STAGE foi interrompida devido erro de execução.
+
+--
+
+Atenciosamente,
+Jair Campelo - Analista de BI</comment>
+      <connectionName/>
+      <contact_persion/>
+      <contact_phone/>
+      <destination>jairjrcampelo@gmail.com</destination>
+      <destinationBCc/>
+      <destinationCc/>
+      <embeddedimages>
+</embeddedimages>
+      <encoding>UTF-8</encoding>
+      <fileTypes>
+</fileTypes>
+      <importance>normal</importance>
+      <include_date>Y</include_date>
+      <include_files>N</include_files>
+      <only_comment>N</only_comment>
+      <port>465</port>
+      <priority>high</priority>
+      <replyToAddresses/>
+      <replyto>jairjrcampelo@gmail.com</replyto>
+      <replytoname>Jair Campelo</replytoname>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <sensitivity>normal</sensitivity>
+      <server>smtp.gmail.com</server>
+      <subject>Xtrail | Limpeza da Stage - Erro</subject>
+      <trusted_hosts/>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <usexoauth2>N</usexoauth2>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <parallel>N</parallel>
+      <xloc>1312</xloc>
+      <yloc>224</yloc>
+      <attributes_hac/>
+    </action>
+    <action>
+      <name>Abort workflow</name>
+      <description/>
+      <type>ABORT</type>
+      <attributes/>
+      <always_log_rows>N</always_log_rows>
+      <parallel>N</parallel>
+      <xloc>944</xloc>
+      <yloc>416</yloc>
       <attributes_hac/>
     </action>
   </actions>
@@ -235,9 +542,86 @@
     </hop>
     <hop>
       <from>limpa_staging</from>
+      <to>email_sucesso_orquestracao_dw</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>email_sucesso_orquestracao_dw</from>
       <to>Success</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>carga_bronze</from>
+      <to>email_erro_bronze</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>carga_silver</from>
+      <to>email_erro_silver</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>carga_gold_dimensoes</from>
+      <to>email_erro_dimensoes</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>carga_gold_fatos</from>
+      <to>email_erro_fatos</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>limpa_staging</from>
+      <to>email_erro_bronze 5</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>email_erro_bronze</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>email_erro_silver</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>email_erro_dimensoes</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>email_erro_fatos</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>email_erro_bronze 5</from>
+      <to>Abort workflow</to>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
     </hop>
   </hops>
