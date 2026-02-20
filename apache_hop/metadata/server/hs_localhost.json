@@ -1,0 +1,13 @@
+{
+  "webAppName": "",
+  "sslMode": false,
+  "proxyPort": "",
+  "hostname": "localhost",
+  "nonProxyHosts": "",
+  "password": "Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8",
+  "virtualPath": "",
+  "port": "8080",
+  "name": "hs_localhost",
+  "proxyHostname": "",
+  "username": "cluster"
+}
