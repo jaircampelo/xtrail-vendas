@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>bot_telegram_gold_fatos_erro</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2026/02/21 05:33:44.074</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2026/02/21 05:33:44.074</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>REST client</from>
+      <to>REST client 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>REST client</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>REST client</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <applicationType>TEXT PLAIN</applicationType>
+    <connectionTimeout>10000</connectionTimeout>
+    <dynamicMethod>N</dynamicMethod>
+    <headers>
+</headers>
+    <ignoreSsl>N</ignoreSsl>
+    <matrixParameters>
+</matrixParameters>
+    <method>POST</method>
+    <parameters>
+      <parameter>
+        <field>text1</field>
+        <name>text</name>
+      </parameter>
+      <parameter>
+        <field>parse_mode</field>
+        <name>parse_mode</name>
+      </parameter>
+    </parameters>
+    <preemptive>N</preemptive>
+    <readTimeout>10000</readTimeout>
+    <result>
+</result>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlInField>N</urlInField>
+    <attributes/>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>336</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>rdc_stg_xtrail_vendas</connection>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT top 1
+		REPLACE(
+				REPLACE(
+						REPLACE(
+								REPLACE(
+										REPLACE(
+												REPLACE(
+														REPLACE(
+																REPLACE(
+																		REPLACE(
+																				REPLACE(
+																						REPLACE(
+																								REPLACE(
+																										REPLACE(
+																												REPLACE(
+																														REPLACE(
+																																REPLACE(
+																																		REPLACE(											
+																																				REPLACE(										
+																																						REPLACE(
+																																								CAST(substring(actionLoggingText,charindex('caused by',actionLoggingText),len(cast(actionLoggingText as VARCHAR(MAX)))) AS VARCHAR(MAX))
+																																								,'\','\\'
+																																						),
+																																						'_','\_'
+																																				),'*','\*'
+																																		),'[','\['
+																																),']','\]'
+																														),'(','\('
+																												),')','\)'
+																										),'~','\~'
+																								),'`','\`'
+																						),'>','\>'
+																				),'#','\#'
+																		),'+','\+'
+																),'-','\-'
+														),'=','\='
+												),'|','\|'
+										),'{','\{'
+								),'}','\}'
+						),'.','\.'
+				),'!','\!'
+		) 																																											AS [text2]
+, '%E2%9A%A0%EF%B8%8F%20Erro%20de%20execu%C3%A7%C3%A3o%20da%20Gold\-Fatos%20Stage%20%20%0A%0A%F0%9F%93%8D%20Rastreamento%20de%20erro%20no%20log%20de%20transa%C3%A7%C3%A3o%3A' 	as [text1]
+, 'markdownv2' 																																										as parse_mode
+FROM logOrquestracaoDw
+WHERE actionErrors >= 1
+ORDER BY loggingDate DESC;</sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>336</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>REST client 2</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <applicationType>TEXT PLAIN</applicationType>
+    <connectionTimeout>10000</connectionTimeout>
+    <dynamicMethod>N</dynamicMethod>
+    <headers>
+</headers>
+    <ignoreSsl>N</ignoreSsl>
+    <matrixParameters>
+</matrixParameters>
+    <method>POST</method>
+    <parameters>
+      <parameter>
+        <field>text2</field>
+        <name>text</name>
+      </parameter>
+      <parameter>
+        <field>parse_mode</field>
+        <name>parse_mode</name>
+      </parameter>
+    </parameters>
+    <preemptive>N</preemptive>
+    <readTimeout>10000</readTimeout>
+    <result>
+</result>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlInField>N</urlInField>
+    <attributes/>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>336</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>

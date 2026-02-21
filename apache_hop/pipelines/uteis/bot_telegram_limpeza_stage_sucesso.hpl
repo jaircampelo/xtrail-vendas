@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>bot_telegram_limpeza_stage_sucesso</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2026/02/21 00:53:24.807</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2026/02/21 00:53:24.807</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>Generate rows</from>
+      <to>REST client</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>Generate rows</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>text</name>
+        <nullif>%F0%9F%A7%B9%20Limpeza%20Stage%20Area%20finalizada%20com%20sucesso%0A%0A%F0%9F%97%82%EF%B8%8F%20Tabelas%20truncadas%3A%20%0A%0A_%F0%9F%A5%89%20Bronze%20Stage%3A_%0A%60bronzeCategorias%60%0A%60bronzeClientes%60%0A%60bronzeDevolucoes%60%0A%60bronzeMetas%60%0A%60bronzeProdutos%60%0A%60bronzeSubcategorias%60%0A%60bronzeTerritorios%60%0A%60bronzeVendas%60%0A%0A_%F0%9F%A5%88%20Silver%20Stage%3A_%0A%60silverCalendario%60%0A%60silverClientes%60%0A%60silverDevolucoes%60%0A%60silverMetas%60%0A%60silverProdutos%60%0A%60silverSubcategorias%60%0A%60silverTerritorios%60%0A%60silverVendas%60</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>parse_mode</name>
+        <nullif>markdownv2</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <interval_in_ms>5000</interval_in_ms>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <row_time_field>now</row_time_field>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>REST client</name>
+    <type>Rest</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <applicationType>TEXT PLAIN</applicationType>
+    <connectionTimeout>10000</connectionTimeout>
+    <dynamicMethod>N</dynamicMethod>
+    <headers>
+</headers>
+    <ignoreSsl>N</ignoreSsl>
+    <matrixParameters>
+</matrixParameters>
+    <method>POST</method>
+    <parameters>
+      <parameter>
+        <field>text</field>
+        <name>text</name>
+      </parameter>
+      <parameter>
+        <field>parse_mode</field>
+        <name>parse_mode</name>
+      </parameter>
+    </parameters>
+    <preemptive>N</preemptive>
+    <readTimeout>10000</readTimeout>
+    <result>
+</result>
+    <trustStorePassword>Encrypted </trustStorePassword>
+    <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlInField>N</urlInField>
+    <attributes/>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>
