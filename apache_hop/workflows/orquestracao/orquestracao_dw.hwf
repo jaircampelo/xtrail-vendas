@@ -417,12 +417,7 @@ Jair Campelo - Analista de BI</comment>
 
 Atenciosamente,
 Jair Campelo - Analista de BI</comment>
-      <connectionName/>
-      <contact_persion/>
-      <contact_phone/>
       <destination>jairjrcampelo@gmail.com</destination>
-      <destinationBCc/>
-      <destinationCc/>
       <embeddedimages>
 </embeddedimages>
       <encoding>UTF-8</encoding>
@@ -434,21 +429,18 @@ Jair Campelo - Analista de BI</comment>
       <only_comment>N</only_comment>
       <port>465</port>
       <priority>high</priority>
-      <replyToAddresses/>
       <replyto>jairjrcampelo@gmail.com</replyto>
       <replytoname>Jair Campelo</replytoname>
       <secureconnectiontype>SSL</secureconnectiontype>
       <sensitivity>normal</sensitivity>
       <server>smtp.gmail.com</server>
       <subject>Xtrail | Limpeza da Stage - Erro</subject>
-      <trusted_hosts/>
       <use_HTML>N</use_HTML>
       <use_Priority>Y</use_Priority>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
       <usexoauth2>N</usexoauth2>
       <zip_files>N</zip_files>
-      <zip_name/>
       <parallel>N</parallel>
       <xloc>1440</xloc>
       <yloc>576</yloc>
@@ -477,8 +469,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_inicio_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -505,8 +495,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -533,8 +521,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -561,8 +547,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -589,8 +573,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -617,8 +599,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_limpeza_stage_inicio.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -645,8 +625,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_sucesso.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -673,8 +651,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_sucesso.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -701,8 +677,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_sucesso.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -729,8 +703,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_sucesso.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -757,8 +729,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_limpeza_stage_sucesso.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -785,8 +755,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_erro.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -813,8 +781,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_erro.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -841,8 +807,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_erro.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -869,8 +833,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_erro.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -886,7 +848,7 @@ Jair Campelo - Analista de BI</comment>
       <attributes_hac/>
     </action>
     <action>
-      <name>bot_telegram_limpeza_stage_erro.hpl</name>
+      <name>bot_limpeza_stage_erro</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -925,8 +887,6 @@ Jair Campelo - Analista de BI</comment>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_fim_carga.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -1162,13 +1122,13 @@ Jair Campelo - Analista de BI</comment>
     </hop>
     <hop>
       <from>limpa_staging</from>
-      <to>bot_telegram_limpeza_stage_erro.hpl</to>
+      <to>bot_limpeza_stage_erro</to>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>bot_telegram_limpeza_stage_erro.hpl</from>
+      <from>bot_limpeza_stage_erro</from>
       <to>email_erro_limpa_staging</to>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
