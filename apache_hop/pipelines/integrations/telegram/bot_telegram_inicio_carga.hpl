@@ -78,14 +78,19 @@
       <schema_name/>
     </partitioning>
     <applicationType>TEXT PLAIN</applicationType>
+    <bodyField/>
     <connectionTimeout>10000</connectionTimeout>
+    <connection_name/>
     <dynamicMethod>N</dynamicMethod>
     <headers>
 </headers>
+    <httpLogin/>
+    <httpPassword/>
     <ignoreSsl>N</ignoreSsl>
     <matrixParameters>
 </matrixParameters>
-    <method>POST</method>
+    <method>GET</method>
+    <methodFieldName/>
     <parameters>
       <parameter>
         <field>text</field>
@@ -97,11 +102,19 @@
       </parameter>
     </parameters>
     <preemptive>N</preemptive>
+    <proxyHost/>
+    <proxyPort/>
     <readTimeout>10000</readTimeout>
     <result>
-</result>
+      <code/>
+      <name/>
+      <response_header/>
+      <response_time/>
+    </result>
+    <trustStoreFile/>
     <trustStorePassword>Encrypted </trustStorePassword>
     <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlField/>
     <urlInField>N</urlInField>
     <attributes/>
     <GUI>

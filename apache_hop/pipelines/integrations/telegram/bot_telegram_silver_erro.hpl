@@ -21,16 +21,88 @@
   </notepads>
   <order>
     <hop>
-      <from>REST client</from>
-      <to>REST client 2</to>
+      <from>Table input</from>
+      <to>Concat Fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
+      <from>Concat Fields</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
       <to>REST client</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <transform>
+    <name>Concat Fields</name>
+    <type>ConcatFields</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <ConcatFields>
+      <removeSelectedFields>N</removeSelectedFields>
+      <targetFieldLength>0</targetFieldLength>
+      <targetFieldName>text</targetFieldName>
+    </ConcatFields>
+    <fields>
+      <field>
+        <length>-1</length>
+        <name>titleMessage</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>titleDateTime</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>dateTime</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>titleLocalName</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>localName</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>titleWorkflowLogging</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+      <field>
+        <length>-1</length>
+        <name>workflowLogging</name>
+        <precision>-1</precision>
+        <type>String</type>
+      </field>
+    </fields>
+    <force_enclosure>N</force_enclosure>
+    <attributes/>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>272</yloc>
+    </GUI>
+  </transform>
   <transform>
     <name>REST client</name>
     <type>Rest</type>
@@ -53,11 +125,11 @@
     <method>POST</method>
     <parameters>
       <parameter>
-        <field>text1</field>
+        <field>text</field>
         <name>text</name>
       </parameter>
       <parameter>
-        <field>parse_mode</field>
+        <field>parseMode</field>
         <name>parse_mode</name>
       </parameter>
     </parameters>
@@ -70,7 +142,37 @@
     <urlInField>N</urlInField>
     <attributes/>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>832</xloc>
+      <yloc>272</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>parseMode</name>
+        <precision>-2</precision>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>text</name>
+        <precision>-2</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
       <yloc>272</yloc>
     </GUI>
   </transform>
@@ -88,100 +190,80 @@
     <connection>rdc_stg_xtrail_vendas</connection>
     <execute_each_row>N</execute_each_row>
     <limit>0</limit>
-    <sql>SELECT top 1
-		REPLACE(
-				REPLACE(
-						REPLACE(
-								REPLACE(
-										REPLACE(
-												REPLACE(
+    <sql>with cte_log_erro as
+(
+
+SELECT '%E2%9A%A0%EF%B8%8F%20Erro%20de%20execu%C3%A7%C3%A3o%20da%20Silver%20Stage%0A%0A' 	as titleLogging
+, REPLACE(
+		   REPLACE(
+				    REPLACE(
+						     REPLACE(
+									  REPLACE(
+											   REPLACE(
 														REPLACE(
-																REPLACE(
-																		REPLACE(
-																				REPLACE(
-																						REPLACE(
-																								REPLACE(
-																										REPLACE(
-																												REPLACE(
-																														REPLACE(
-																																REPLACE(
-																																		REPLACE(											
-																																				REPLACE(										
-																																						REPLACE(
-																																								CAST(substring(actionLoggingText,charindex('caused by',actionLoggingText),len(cast(actionLoggingText as VARCHAR(MAX)))) AS VARCHAR(MAX))
-																																								,'\','\\'
-																																						),
-																																						'_','\_'
-																																				),'*','\*'
-																																		),'[','\['
-																																),']','\]'
-																														),'(','\('
-																												),')','\)'
-																										),'~','\~'
-																								),'`','\`'
-																						),'>','\>'
-																				),'#','\#'
-																		),'+','\+'
-																),'-','\-'
-														),'=','\='
-												),'|','\|'
-										),'{','\{'
-								),'}','\}'
-						),'.','\.'
-				),'!','\!'
-		) 																																								AS [text2]
-, '%E2%9A%A0%EF%B8%8F%20Erro%20de%20execu%C3%A7%C3%A3o%20da%20Silver%20Stage%20%0A%0A%F0%9F%93%8D%20Rastreamento%20de%20erro%20no%20log%20de%20transa%C3%A7%C3%A3o%3A' 	as [text1]
-, 'markdownv2' 																																							as parse_mode
+																 REPLACE(
+																		  REPLACE(
+																				   REPLACE(
+																						    REPLACE(
+																								     REPLACE(
+																										      REPLACE(
+																												       REPLACE(
+																														        REPLACE(
+																																         REPLACE(
+																																		          REPLACE(											
+																																				           REPLACE(										
+																																						            REPLACE(
+																																								             cast(workflowLogging as VARCHAR(MAX))
+																																								           , '\','\\')
+																																						            , '_','\_')
+																																						 , '*','\*')
+																																			    , '[','\[')
+																																	   , ']','\]')
+																															  , '(','\(')
+																													 , ')','\)')
+																										    , '~','\~')
+																								   , '`','\`')
+																						  , '>','\>')
+																			     , '#','\#')
+																	    , '+','\+')
+															   , '-','\-')
+													  , '=','\=')
+											 , '|','\|')
+								    , '{','\{')
+						   , '}','\}')
+				  , '.','\.')
+		 , '!','\!') 																																					as workflowLogging
+, 'markdownv2' 																																							as parseMode
+, loggingDate
 FROM logOrquestracaoDw
-WHERE actionErrors >= 1
-ORDER BY loggingDate DESC;</sql>
+
+)
+
+select top 1
+	   a.titleLogging																								as titleMessage
+	 , '%F0%9F%95%90%20Hor%C3%A1rio%20de%20ocorr%C3%AAncia%20do%20erro%3A%20' 										as titleDateTime
+	 , '`' + convert(varchar(50),b.loggingDate,121) + '`' 															as dateTime
+	 , '%0A%0A%F0%9F%97%BA%EF%B8%8F%20Local%20de%20ocorr%C3%AAncia%20do%20erro%3A%0A' 								as titleLocalName
+	 , '`' + b.actionName + '`'																						as localName
+	 , '%0A%0A%F0%9F%93%8D%20Rastreamento%20de%20erro%20no%20log%20de%20transa%C3%A7%C3%A3o%3A%0A%0A'				as titleWorkflowLogging
+	 , replace( replace( replace( substring( a.workflowLogging
+						 			       , charindex(replace(b.actionName,'_','\_'),a.workflowLogging)
+						 			       , 4000)
+					            , CHAR(13) + CHAR(10), '%0A')
+			  		   , CHAR(13), '%0A')
+			  , CHAR(10), '%0A')																					as workflowLogging
+	 , a.parseMode 																									as parseMode
+  from cte_log_erro 	 a
+  left
+  join logOrquestracaoDw b on a.loggingDate = b.loggingDate
+ where left(b.workflowName,5) in ('carga','limpa')
+   and b.actionErrors >=1
+ order
+    by b.loggingDate desc</sql>
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
       <xloc>192</xloc>
-      <yloc>272</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>REST client 2</name>
-    <type>Rest</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <applicationType>TEXT PLAIN</applicationType>
-    <connectionTimeout>10000</connectionTimeout>
-    <dynamicMethod>N</dynamicMethod>
-    <headers>
-</headers>
-    <ignoreSsl>N</ignoreSsl>
-    <matrixParameters>
-</matrixParameters>
-    <method>POST</method>
-    <parameters>
-      <parameter>
-        <field>text2</field>
-        <name>text</name>
-      </parameter>
-      <parameter>
-        <field>parse_mode</field>
-        <name>parse_mode</name>
-      </parameter>
-    </parameters>
-    <preemptive>N</preemptive>
-    <readTimeout>10000</readTimeout>
-    <result>
-</result>
-    <trustStorePassword>Encrypted </trustStorePassword>
-    <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
-    <urlInField>N</urlInField>
-    <attributes/>
-    <GUI>
-      <xloc>560</xloc>
       <yloc>272</yloc>
     </GUI>
   </transform>

@@ -39,10 +39,6 @@
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>text</name>
         <nullif>%E2%9C%85%20Carga%20Bronze%20finalizada%0A%0A%F0%9F%97%82%EF%B8%8F%20Tabelas%20carregadas%3A%20%20%0A%60bronzeCategorias%60%20%0A%60bronzeClientes%60%20%0A%60bronzeProdutos%60%20%0A%60bronzeSubcategorias%60%20%0A%60bronzeTerritorios%60%20%0A%60bronzeDevolucoes%60%20%0A%60bronzeMetas%60%20%0A%60bronzeVendas%60%20</nullif>
@@ -51,10 +47,6 @@
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>parse_mode</name>
         <nullif>markdownv2</nullif>

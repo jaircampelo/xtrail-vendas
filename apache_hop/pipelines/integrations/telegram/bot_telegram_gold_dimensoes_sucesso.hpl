@@ -39,10 +39,6 @@
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>text</name>
         <nullif>%E2%9C%85%20Carga%20Gold\-Dimensoes%20finalizada%20%20%0A%0A%F0%9F%97%82%EF%B8%8F%20Tabelas%20carregadas%3A%20%20%0A%60dClientes%60%0A%60dProdutos%60%0A%60dSubcategorias%60%20%0A%60dTerritorios%60%20%0A%60dCalendario%60</nullif>
@@ -51,10 +47,6 @@
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>parse_mode</name>
         <nullif>markdownv2</nullif>
@@ -86,14 +78,19 @@
       <schema_name/>
     </partitioning>
     <applicationType>TEXT PLAIN</applicationType>
+    <bodyField/>
     <connectionTimeout>10000</connectionTimeout>
+    <connection_name/>
     <dynamicMethod>N</dynamicMethod>
     <headers>
 </headers>
+    <httpLogin/>
+    <httpPassword/>
     <ignoreSsl>N</ignoreSsl>
     <matrixParameters>
 </matrixParameters>
     <method>POST</method>
+    <methodFieldName/>
     <parameters>
       <parameter>
         <field>text</field>
@@ -105,11 +102,19 @@
       </parameter>
     </parameters>
     <preemptive>N</preemptive>
+    <proxyHost/>
+    <proxyPort/>
     <readTimeout>10000</readTimeout>
     <result>
-</result>
+      <code/>
+      <name/>
+      <response_header/>
+      <response_time/>
+    </result>
+    <trustStoreFile/>
     <trustStorePassword>Encrypted </trustStorePassword>
     <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlField/>
     <urlInField>N</urlInField>
     <attributes/>
     <GUI>

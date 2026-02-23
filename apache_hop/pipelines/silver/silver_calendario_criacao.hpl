@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pipeline>
   <info>
-    <name>stg_silver_calendario_criacao</name>
+    <name>silver_calendario_criacao</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
     <description/>
     <extended_description/>
@@ -448,9 +448,14 @@
     </partitioning>
     <calculation>
       <calc_type>ADD_DAYS</calc_type>
+      <conversion_mask/>
+      <currency_symbol/>
+      <decimal_symbol/>
       <field_a>_data_inicial</field_a>
       <field_b>sequencia</field_b>
+      <field_c/>
       <field_name>data</field_name>
+      <grouping_symbol/>
       <remove>N</remove>
       <value_length>-1</value_length>
       <value_precision>-1</value_precision>

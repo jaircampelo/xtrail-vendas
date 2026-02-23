@@ -39,10 +39,6 @@
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>text</name>
         <nullif>%E2%9C%85%20Carga%20Silver%20finalizada%20%0A%0A%F0%9F%97%82%EF%B8%8F%20Tabelas%20carregadas%3A%20%0A%60silverClientes%60%0A%60silverProdutos%60%0A%60silverSubcategorias%60%0A%60silverTerritorios%60%0A%60silverDevolucoes%60%0A%60silverMetas%60%0A%60silverVendas%60%0A%60silverCalendario%60</nullif>
@@ -51,10 +47,6 @@
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>parse_mode</name>
         <nullif>markdownv2</nullif>
@@ -70,8 +62,8 @@
     <row_time_field>now</row_time_field>
     <attributes/>
     <GUI>
-      <xloc>288</xloc>
-      <yloc>368</yloc>
+      <xloc>240</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform>
@@ -113,8 +105,8 @@
     <urlInField>N</urlInField>
     <attributes/>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>368</yloc>
+      <xloc>528</xloc>
+      <yloc>320</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

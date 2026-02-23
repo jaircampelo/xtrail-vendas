@@ -39,10 +39,6 @@
     </partitioning>
     <fields>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>text</name>
         <nullif>*%F0%9F%A5%87%20Carga%20da%20Stage%20Gold%20Fatos%20iniciada*</nullif>
@@ -51,10 +47,6 @@
         <type>String</type>
       </field>
       <field>
-        <currency/>
-        <decimal/>
-        <format/>
-        <group/>
         <length>-1</length>
         <name>parse_mode</name>
         <nullif>markdownv2</nullif>
@@ -86,14 +78,19 @@
       <schema_name/>
     </partitioning>
     <applicationType>TEXT PLAIN</applicationType>
+    <bodyField/>
     <connectionTimeout>10000</connectionTimeout>
+    <connection_name/>
     <dynamicMethod>N</dynamicMethod>
     <headers>
 </headers>
+    <httpLogin/>
+    <httpPassword/>
     <ignoreSsl>N</ignoreSsl>
     <matrixParameters>
 </matrixParameters>
     <method>POST</method>
+    <methodFieldName/>
     <parameters>
       <parameter>
         <field>text</field>
@@ -105,11 +102,19 @@
       </parameter>
     </parameters>
     <preemptive>N</preemptive>
+    <proxyHost/>
+    <proxyPort/>
     <readTimeout>10000</readTimeout>
     <result>
-</result>
+      <code/>
+      <name/>
+      <response_header/>
+      <response_time/>
+    </result>
+    <trustStoreFile/>
     <trustStorePassword>Encrypted </trustStorePassword>
     <url>https://api.telegram.org/bot${telegram_token}/sendmessage?chat_id=${chat_id}&amp;</url>
+    <urlField/>
     <urlInField>N</urlInField>
     <attributes/>
     <GUI>
