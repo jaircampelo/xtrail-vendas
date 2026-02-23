@@ -14,7 +14,7 @@ Também foi implementado um sistema de monitoramento automático através do dis
 
 ## :compass: Mapeamento de Soluções
 
-Antes de tudo, através de reuniões com o cliente, aqui denominado de **Xtrail**, foi realizado o levantamento de requisitos e definido das regras de negócio. O documento resultante dessa reunião se encontra disponível em `será inserido em update futuro`.
+Antes de tudo, através de reuniões com o cliente, aqui denominado de **Xtrail**, foi realizado o levantamento de requisitos e definido das regras de negócio. O documento resultante dessa reunião se encontra disponível em [mapeamento_requisitos.md](apache_hop/docs/mapeamento_requisitos.md).
 
 ---
 
@@ -23,8 +23,96 @@ Antes de tudo, através de reuniões com o cliente, aqui denominado de **Xtrail*
 De acordo com o Mapeamento de Soluções proposto, a modelagem foi construíd com o auxílio da plataforma [dbdiagram.io](https://dbdiagram.io) e utilizando o modelo **Star Schema*.
 
 #### Modelo de Dados com DBML:
-```
-<Será inserido em update futuro>
+```sql
+table dClientes {
+  cliente_id              int pk
+  cliente_nome_completo   varchar(100)
+  cliente_data_nascimento date
+  cliente_idade           int
+  cliente_estado_civil    varchar(100)
+  cliente_email           varchar(50)
+  cliente_sexo            varchar(1)
+  cliente_nivel_educacao  varchar(50)
+  cliente_ocupacao        varchar(50)
+  cliente_data_cadastro   date
+  cliente_data_registro   datetime
+}
+
+table dTerritorios {
+  territorio_id             int pk
+  territorio_regiao         varchar(50)
+  territorio_pais           varchar(50)
+  territorio_continente     varchar(50)
+  territorio_data_registro  datetime
+}
+
+table dProdutos {
+  produto_sk            int pk
+  produto_id            int
+  produto_SKU           varchar(50)
+  produto_nome          varchar(50)
+  produto_modelo        varchar(50)
+  produto_descricao     varchar(50)
+  produto_cor           varchar(50)
+  produto_tamanho       varchar(50)
+  produto_estilo        varchar(50)
+  custo_unitario        float
+  preco_unitario        float
+  data_inicio           datetime
+  data_fim              datetime
+  produto_versao        int
+  produto_data_registro datetime
+}
+
+table dSubcategoria {
+  subcategoria_id            int pk
+  subcategoria_nome          varchar(50)
+  categoria_nome             varchar(50)
+  subcategoria_data_registro datetime
+}
+
+table dCalendario {
+  data                date pk
+  data_key            int
+  ano_num             int
+  mes_num             int
+  mes_nome            varchar(50)
+  mes_nome_abrev      varchar(3)
+  mes_ano_nome_abrev  varchar(10)
+  trimestre_num       int
+  trimestre_nome      varchar(2)
+  trimestre_ano_nome  varchar(10)
+  semestre_num        int
+  semestre_nome       varchar(50)
+}
+
+table fVendas {
+  pedido_data           date           [ref:> dCalendario.data]
+  estoque_data          date
+  pedido_num            varchar(7) pk
+  produto_sk            int            [ref:> dProdutos.produto_sk]
+  subcategoria_id       int            [ref:> dSubcategoria.subcategoria_id]
+  cliente_id            int            [ref:> dClientes.cliente_id]
+  territorio_id         int            [ref:> dTerritorios.territorio_id]
+  pedido_item_linha     int pk
+  pedido_qtd            int
+  vendas_data_registro  datetime
+}
+
+table fDevolucoes {
+  devolucao_id              int pk
+  devolucao_data            date  [ref:> dCalendario.data]
+  territorio_id             int   [ref:> dTerritorios.territorio_id]
+  produto_sk                int   [ref:> dProdutos.produto_sk]
+  devolucao_qtd             int
+  devolucoes_data_registro  datetime
+}
+
+table fMetas {
+  meta_data           date pk [ref:> dCalendario.data]
+  meta_valor          float
+  metas_data_registro datetime
+}
 ```
 
 ---
