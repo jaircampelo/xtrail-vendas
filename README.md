@@ -1,7 +1,5 @@
 # Projeto de ETL com o uso de Apache Hop
 
----
-
 ## :pushpin: Overview
 
 Esse repositório apresenta a solução final de um projeto de ETL criado do zero  no decorrer do curso de Data Warehouse com Apache Hop, da [Plataforma Xperiun](https://xperiun.com/).
@@ -10,13 +8,9 @@ Durante o projeto foram seguidas as boas práticas da **Arquitetura Medalhão** 
 
 Também foi implementado um sistema de monitoramento automático através do disparo de e-mails e mensagens via bot do Telegram, no decorrer do sucesso ou fracasso na execução dos workflows.
 
----
-
 ## :compass: Mapeamento de Soluções
 
 Antes de tudo, através de reuniões com o cliente, aqui denominado de **Xtrail**, foi realizado o levantamento de requisitos e definido das regras de negócio. O documento resultante dessa reunião se encontra disponível em [mapeamento_requisitos.md](apache_hop/docs/mapeamento_requisitos.md).
-
----
 
 ## :star: Modelagem de Dados
 
@@ -115,8 +109,6 @@ table fMetas {
 }
 ```
 
----
-
 ## :1st_place_medal: :2nd_place_medal: :3rd_place_medal: Arquitetura Medalhão
 
 O tratamento de dados foi dividido em 3 camadas dentro do Apache Hop:
@@ -136,8 +128,6 @@ O tratamento de dados foi dividido em 3 camadas dentro do Apache Hop:
 3. Camada Gold
 >Nessa etapa foram criadas as *Primary Keys* e as tabelas foram levadas, já tratadas, para o banco de dados DW prontas para uso.
 
----
-
 ## :arrow_forward: Orquestração do DW
 
 Para orquestrar a carga de dados dentro do DW, todos os pipelines foram inseridos através de worflows, de modo que:
@@ -147,15 +137,13 @@ Para orquestrar a carga de dados dentro do DW, todos os pipelines foram inserido
 
 Por fim, foi criado um pipeline responsável pela limpeza de todos os dados da Stage Área (*bronze* e *silver*), mantendo apenas a estrutura através de *truncate table* via comando SQL.
 
----
-
 ## :satellite: Sistemas de Monitoramento
 
 Com o uso de transforms dentro do Apache Hop, foi criado um sistema de disparo de e-mails relatando o sucesso de carregamento do DW ou a falha na execução de alguma etapa do processo de ETL.
 
 Também foi criado um bot no Telegram, que é responsável por enviar mensagens customizadas indicando em qual etapa o processo de carregamento dos dados se encontra, e através do monitoramento de logs, em caso de erro, dispara uma mensagem indicando a camada onde o erro ocorreu e o log de transação mostrando a causa do erro.
 
----
+Para visualizar o guia do funcionamento da API do telegram, clique [aqui](https://core.telegram.org/bots/api).
 
 ## :wrench: Tecnologias Utilizadas
 
@@ -167,8 +155,6 @@ Também foi criado um bot no Telegram, que é responsável por enviar mensagens 
 - vsCode
 - Git/GitHub
 - Telegram Bot API
-
----
 
 ## Agradecimentos
 
