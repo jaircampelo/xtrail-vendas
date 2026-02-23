@@ -41,7 +41,9 @@
       <add_time>N</add_time>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_bronze.hwf</filename>
+      <filename>${__workflows_orquestracao_path}carga_bronze.hwf</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -65,7 +67,7 @@
       <add_time>N</add_time>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_silver.hwf</filename>
+      <filename>${__workflows_orquestracao_path}carga_silver.hwf</filename>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -89,7 +91,7 @@
       <add_time>N</add_time>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_gold_dimensoes.hwf</filename>
+      <filename>${__workflows_orquestracao_path}carga_gold_dimensoes.hwf</filename>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -113,7 +115,7 @@
       <add_time>N</add_time>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/carga_gold_fatos.hwf</filename>
+      <filename>${__workflows_orquestracao_path}carga_gold_fatos.hwf</filename>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -149,7 +151,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_extra_data_incremental_variavel.hpl</filename>
+      <filename>${__pip_utils_path}extra_data_incremental_variavel.hpl</filename>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -173,7 +175,7 @@
       <add_time>N</add_time>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/workflows/orquestracao/limpa_staging.hwf</filename>
+      <filename>${__workflows_orquestracao_path}limpa_staging.hwf</filename>
       <loglevel>Nothing</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -468,13 +470,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_inicio_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_inicio_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -494,13 +498,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_bronze_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -520,13 +526,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_silver_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -546,13 +554,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_dimensoes_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -572,13 +582,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_fatos_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -598,13 +610,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_limpeza_stage_inicio.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_limpeza_stage_inicio.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -624,13 +638,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_sucesso.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_bronze_sucesso.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -650,13 +666,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_sucesso.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_silver_sucesso.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -676,13 +694,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_sucesso.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_dimensoes_sucesso.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -702,13 +722,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_sucesso.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_fatos_sucesso.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -728,13 +750,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_limpeza_stage_sucesso.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_limpeza_stage_sucesso.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -754,13 +778,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_bronze_erro.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_bronze_erro.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -780,13 +806,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_silver_erro.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_silver_erro.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -806,13 +834,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_dimensoes_erro.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_dimensoes_erro.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -832,13 +862,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_gold_fatos_erro.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_gold_fatos_erro.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -858,7 +890,7 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_limpeza_stage_erro.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_limpeza_stage_erro.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -866,7 +898,7 @@ Jair Campelo - Analista de BI</comment>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
@@ -886,13 +918,15 @@ Jair Campelo - Analista de BI</comment>
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/uteis/bot_telegram_fim_carga.hpl</filename>
+      <filename>${__pip_integrations_telegram_path}bot_telegram_fim_carga.hpl</filename>
+      <logext/>
+      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
       <params_from_previous>N</params_from_previous>
-      <run_configuration>remote</run_configuration>
+      <run_configuration>local</run_configuration>
       <set_append_logfile>N</set_append_logfile>
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>

@@ -42,7 +42,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_data_inicial&amp;data_final_variaveis.hpl</filename>
+      <filename>${__pip_silver_path}silver_data_inicial&amp;data_final_variaveis.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -70,7 +70,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_clientes_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_clientes_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -98,7 +98,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_territorios_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_territorios_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -126,7 +126,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_subcategorias_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_subcategorias_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -154,7 +154,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_produtos_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_produtos_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -182,7 +182,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_metas_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_metas_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -210,7 +210,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_vendas_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_vendas_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -238,7 +238,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_devolucoes_tratamento.hpl</filename>
+      <filename>${__pip_silver_path}silver_devolucoes_tratamento.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -266,7 +266,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/staging/stg_silver_calendario_criacao.hpl</filename>
+      <filename>${__pip_silver_path}silver_calendario_criacao.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>

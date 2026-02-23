@@ -32,7 +32,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_dTerritorios</name>
+      <name>gold_dim_territorios</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -42,7 +42,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dTerritorios.hpl</filename>
+      <filename>${__pip_gold_path}gold_dim_territorios.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -60,7 +60,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_dClientes</name>
+      <name>gold_dim_clientes</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -70,7 +70,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dClientes.hpl</filename>
+      <filename>${__pip_gold_path}gold_dim_clientes.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -88,7 +88,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_dSubcategorias</name>
+      <name>gold_dim_subcategorias</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -98,7 +98,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dSubcategorias.hpl</filename>
+      <filename>${__pip_gold_path}gold_dim_subcategorias.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -116,7 +116,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_dProdutos</name>
+      <name>gold_dim_produtos</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -126,7 +126,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dProdutos.hpl</filename>
+      <filename>${__pip_gold_path}gold_dim_produtos.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -144,7 +144,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_dCalendario</name>
+      <name>gold_dim_calendario</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -154,7 +154,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_dCalendario.hpl</filename>
+      <filename>${__pip_gold_path}gold_dim_calendario.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -175,35 +175,35 @@
   <hops>
     <hop>
       <from>Start</from>
-      <to>gold_dTerritorios</to>
+      <to>gold_dim_territorios</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>gold_dTerritorios</from>
-      <to>gold_dClientes</to>
+      <from>gold_dim_territorios</from>
+      <to>gold_dim_clientes</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>gold_dClientes</from>
-      <to>gold_dSubcategorias</to>
+      <from>gold_dim_clientes</from>
+      <to>gold_dim_subcategorias</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>gold_dSubcategorias</from>
-      <to>gold_dProdutos</to>
+      <from>gold_dim_subcategorias</from>
+      <to>gold_dim_produtos</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>gold_dProdutos</from>
-      <to>gold_dCalendario</to>
+      <from>gold_dim_produtos</from>
+      <to>gold_dim_calendario</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

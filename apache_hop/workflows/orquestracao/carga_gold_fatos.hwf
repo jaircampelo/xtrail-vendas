@@ -32,7 +32,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_fMetas</name>
+      <name>gold_fato_metas</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -42,7 +42,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fMetas.hpl</filename>
+      <filename>${__pip_gold_path}gold_fato_metas.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -60,7 +60,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_fDevolucoes</name>
+      <name>gold_fato_devolucoes</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -70,7 +70,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fDevolucoes.hpl</filename>
+      <filename>${__pip_gold_path}gold_fato_devolucoes.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -88,7 +88,7 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>gold_fVendas</name>
+      <name>gold_fato_vendas</name>
       <description/>
       <type>PIPELINE</type>
       <attributes/>
@@ -98,7 +98,7 @@
       <clear_rows>N</clear_rows>
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
-      <filename>${PROJECT_HOME}/apache_hop/pipelines/dw/dw_gold_fVendas.hpl</filename>
+      <filename>${__pip_gold_path}gold_fato_vendas.hpl</filename>
       <logext/>
       <logfile/>
       <loglevel>Basic</loglevel>
@@ -137,15 +137,15 @@ WHERE devolucao_data >= '${_data_incremental}'</sql>
   </actions>
   <hops>
     <hop>
-      <from>gold_fMetas</from>
-      <to>gold_fDevolucoes</to>
+      <from>gold_fato_metas</from>
+      <to>gold_fato_devolucoes</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>gold_fDevolucoes</from>
-      <to>gold_fVendas</to>
+      <from>gold_fato_devolucoes</from>
+      <to>gold_fato_vendas</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
@@ -159,7 +159,7 @@ WHERE devolucao_data >= '${_data_incremental}'</sql>
     </hop>
     <hop>
       <from>sql_deleta_incremental</from>
-      <to>gold_fMetas</to>
+      <to>gold_fato_metas</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
